@@ -1,7 +1,9 @@
 :root {
-  --primary-bg: #eaf6ff;
-  --secondary-bg: #d5ecff;
-  --tertiary-bg: #e6f4ff;
+  /* --primary-bg: #8EC8F1; */
+  --primary-bg:  #e7f3fb;  
+  --secondary-bg: #ede8f5;
+  /* --tertiary-bg: #e6f4ff; */
+  --tertiary-bg: #c3dbee;
   --text-color: #424242;
   --border-color: #d8d8d8;
   --accent-color: #a6a6a6;
@@ -175,6 +177,7 @@ a {
 
 .logo a img {
   width: 10rem;
+
 }
 
 .menu {
@@ -384,7 +387,7 @@ a {
   font-weight: 400;
   text-transform: capitalize;
   border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid #78b4e6;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -418,6 +421,7 @@ a {
 /* About css */
 .about-section {
   padding: 3rem 2rem;
+  background: var(--primary-bg);
 }
 
 .about-container {
@@ -432,7 +436,7 @@ a {
 
 .about-image {
   width: 40%;
-  height: 600px;
+  height: 570px;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -694,7 +698,7 @@ a {
 /* CSS for Contact */
 .contact-section {
   padding: 3rem 2rem;
-  background: var(--secondary-bg);
+  background: var(--tertiary-bg);
 }
 
 .contact-wrapper {
@@ -1006,7 +1010,7 @@ i {
 
   .about-image {
     width: 100%;
-    height: 500px;
+    height: 700px;
   }
 
   .about-content {
@@ -1026,6 +1030,12 @@ i {
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
   }
+
+/* .insight-card {
+  padding: 28px 40px 34px 40px;
+  border-radius: 38px 32px 26px 26px;
+  transition: all 0.5s ease;
+} */
 }
 
 
@@ -1073,9 +1083,9 @@ i {
     padding: 1rem;
   }
 
-  .about-image {
+ .about-image {
     width: 100%;
-    height: 380px;
+    height: 500px;
   }
 
   .gallery-title {
@@ -1307,64 +1317,76 @@ i {
   }
 }
 
-/* Card Css */
-.quote-card{
-    background: var(--card-bg, #ffffff); /* falls back to white if no root provided */
-    border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 14px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    padding: 28px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
+/* Card css */
+/* ---- Main Section ---- */
+.quote-section{
+    padding: 5rem 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease;
+    background: var(--primary-bg);
 }
 
+/* ---- Card Styling ---- */
+.quote-card{
+    width: 100%;
+    background: #ffffff;               /* card background */
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: -1.5rem;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover Effect */
 .quote-card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 35px rgba(0,0,0,0.15);
 }
 
-.quote-text{
-    font-family: "Raleway", sans-serif;
-    line-height: 1.55;
-    color: var(--text-color, #1a1a1a);
+/* ---- Text Styling ---- */
+.quote-card blockquote{
+    font-size: 1.15rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 20px;
 }
 
-blockquote{
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 300;
-    position: relative;
-    padding-left: 18px;
-}
-
-blockquote::before{
-    content: "“";
-    font-size: 3rem;
-    color: var(--primary, #4DB7FF);
-    position: absolute;
-    left: -2px;
-    top: -10px;
-    opacity: 0.18;
-}
-
-.author{
-    margin-top: 14px;
-    font-size: 0.95rem;
-    color: var(--muted-color, #787878);
+.quote-card .author{
+    text-align: right;
     font-weight: 600;
+    font-size: 1rem;
+    color: #2e2e2e;
 }
 
-/* Responsive */
-@media (min-width: 768px){
+/* ---- Responsive ---- */
+@media (max-width: 480px){
+
+  .quote-section{
+    padding: 0rem 1rem;
+}
     .quote-card{
-        padding: 40px;
+        padding: 22px;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
     }
-    blockquote{
-        font-size: 1.2rem;
+    .quote-card blockquote{
+        font-size: 1rem;
     }
 }
+
+/* Animations */
+.quote-card{
+    animation: fadeUp 2s ease-out forwards, floating 3s ease-in-out infinite;
+}
+
+/* Floating keyframes */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+
+

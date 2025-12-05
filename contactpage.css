@@ -1,7 +1,7 @@
 :root {
     --primary-bg:  #d5ecff;;
     --secondary-bg: #eeeeee;
-    --tertiary-bg:  #EFE4DF;
+    --tertiary-bg:  #e7f3fb; 
     --text-color: #424242;
     --border-color:#d8d8d8;
     --accent-color:#a6a6a6;
@@ -287,7 +287,7 @@ a {
     font-weight: 500;
     color: var(--text-color);
     font-size: 20px;
-    border: 1px solid rgba(255, 235, 235, 1);
+    border: 1px solid #78b4e6;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -369,14 +369,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(227, 239, 240);
+    /* background: rgb(227, 239, 240); */
 }
 
 .right-form {
     width: 100%;
     max-width: 75%;
     padding: 2rem;
-    background: var(--primary-bg);
+    background: white;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
