@@ -228,7 +228,7 @@ a {
   font-weight: 500;
   color: var(--text-color);
   font-size: 20px;
-  border: 1px solid rgba(255, 235, 235, 1);
+  border: 1px solid #78b4e6;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
